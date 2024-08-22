@@ -2,34 +2,77 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
-    <div id="rounds-container">
-      <h2>How many rounds?</h2>
-      <label for="5rounds">5 Rounds</label>
-      <input type="checkbox" name="5rounds" id="5rounds" />
-      <label for="10rounds">10 Rounds</label>
-      <input type="checkbox" name="10rounds" id="10 rounds" />
-      <label for="15rounds">15 Rounds</label>
-      <input type="checkbox" name="15rounds" id="15rounds" />
-      <label for="20rounds">20 Rounds</label>
-      <input type="checkbox" name="20rounds" id="20rounds" />
-    </div>
+    <main>
+      <h1>ROCK PAPER SCISSORS</h1>
+      <section>
+        <form action="" onsubmit="return false">
+          <h2>How many rounds?</h2>
+          <div>
+            <input
+              type="radio"
+              name="round"
+              value="5"
+              id="five"
+              onchange="displayRounds()"
+            />
+            <label for="">5</label>
+            <input
+              type="radio"
+              name="round"
+              value="10"
+              id="ten"
+              onchange="displayRounds()"
+            />
+            <label for="">10</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="round"
+              value="15"
+              id="fifteen"
+              onchange="displayRounds()"
+            />
+            <label for="">15</label>
+            <input
+              type="radio"
+              name="round"
+              value="20"
+              id="twenty"
+              onchange="displayRounds()"
+            />
+            <label for="">20</label>
+          </div>
+          <p id="showRounds"></p>
+        </form>
 
-    <div id="score-container"></div>
+        <div class="countMoves"></div>
 
-    <div id="move-container">
-      <h2>Let's play</h2>
-      <button type="submit" id="rock"><img src="" alt="" /></button>
-      <button type="submit" id="paper"><img src="" alt="" /></button>
-      <button type="submit" id="scissors"><img src="" alt="" /></button>
-    </div>
-    <p>Make your move</p>
-    <button id="restart">restart</button>
-    <script type="module" src="/src/main.ts"></script>
+        <div class="results">
+          <p class="output_text"></p>
+          <h3 class="usersPick">Your choice:</h3>
+          <p class="userResult">Score: 0</p>
+
+          <h3 class="computersPick">Computers choice:</h3>
+          <p class="computerResult">Score: 0</p>
+        </div>
+
+        <div class="options">
+          <button class="rock">✊</button>
+          <button class="paper">✋</button>
+          <button class="scissors">✌️</button>
+        </div>
+
+        <div class="resultText"></div>
+
+        <a href="#" class="restart">RESTART</a>
+      </section>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
